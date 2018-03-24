@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="APITestSuite">
+<listeners>
+<listener class-name="com.vp.restutils.ExtentReportListner"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+<!--       <class name="getRequest.GetData"/> -->
+    <class name="com.vp.tests.AutheniticateAPITest"/>
+    <class name="com.vp.tests.DashBoardAPITest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

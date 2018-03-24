@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [APITestSuite]">
+  <listeners>
+    <listener class-name="com.vp.restutils.ExtentReportListner"/>
+  </listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.vp.tests.AutheniticateAPITest"/>
+      <class name="com.vp.tests.DashBoardAPITest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.vp.tests.AutheniticateAPITest">
+        <methods>
+          <include name="Auth_TC_2_WithInValidCredentials"/>
+          <include name="Auth_TC_1_WithValidCredentials"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.vp.tests.AutheniticateAPITest -->
+      <class name="com.vp.tests.DashBoardAPITest">
+        <methods>
+          <include name="DashBoard_TC_1_WithValidCredentials"/>
+          <include name="DashBoard_TC_2_WithInValidCredentials"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.vp.tests.DashBoardAPITest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [APITestSuite] -->
